@@ -19,8 +19,8 @@
                     <div class="menu_item">
                         <div class="header_logo">
                             <a href="#">
-                                <img src="img/main.png" class="main" alt="">
                                 <img src="img/logo.png" id="image" class="logo" alt="">
+                                <img src="img/small_logo.png" id="image_small" alt="" class="small_logo">
                             </a>
                         </div>
                         <nav>
@@ -28,7 +28,7 @@
 
 
                                 <div class="header__btn-menu"  >
-                                    <div class="icon" onClick="imgsrc();">
+                                    <div class="icon" onClick="imgsrc(); imgSmallsrc();">
                                         <span ></span>
                                         <span></span>
                                         <span></span>
@@ -61,9 +61,9 @@
                                         <button class="restart" id="reset">
                                             <img src="img/Union.png" alt="">
                                         </button>
-                                        <div class="switch_mode">
+                                        <button class="switch_mode">
                                             <img src="img/light-mode.png" alt="">
-                                        </div>
+                                        </button>
                                         <div class="user">
                                             <img src="img/Rounded rectangle.png" alt="" srcset="">
                                             <div class="user_item">
@@ -97,7 +97,14 @@
             </div>
 
         </div>
-
+        <div class="nav_switch_bottom">
+            <button class="restart_mobail" id="reset_mob">
+                <img src="img/Union.png" alt="">
+            </button>
+            <button class="switch_mode_mobile">
+                <img src="img/light-mode.png" alt="">
+            </button>
+        </div>
 
 
     </section>
