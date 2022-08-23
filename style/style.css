@@ -60,6 +60,7 @@ button{
 .menu{
     display: flex;
     justify-content: space-between;
+    padding-left: 15px;
 }
 
 
@@ -80,7 +81,7 @@ font-family: 'Montserrat', sans-serif;
 font-weight: 600; 
 line-height: 24px;
 letter-spacing: -0.20000000298023224px;
-width: 870px;
+width: 960px;
 color: #5e5e5e;
  }
 
@@ -161,6 +162,10 @@ color: #5e5e5e;
     align-items: center;
     width: 200px;
  }
+.restart, .switch_mode, .user:hover{
+    cursor: pointer;
+}
+
  .nav_switch_bottom{
     display: none;
  }
@@ -205,7 +210,9 @@ color: #5e5e5e;
     font-weight: 600;
     margin: 0;
 }
-
+.dropbtn:hover{
+    cursor: pointer;
+}
 .bird{
     display: flex;
     align-items: center;

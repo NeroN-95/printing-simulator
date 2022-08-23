@@ -37,3 +37,18 @@ document.getElementById('reset_mob').onclick = function(){
       smallImage.src=img[n];
   }
   
+
+let switchMode = document.getElementById('switchMode');
+
+switchMode.onclick = function () {
+    let theme = document.getElementById("theme");
+    let switcher = document.getElementById("switcher") ;
+    if (theme.getAttribute('href') == 'style/light-mode.css') {
+        theme.href = "style/dark-mode.css"
+        switcher.src = "img/light-mode.png"
+    }
+    else{
+        theme.href = "style/light-mode.css"
+        switcher.src = "img/dark-mode.png"
+    }
+}

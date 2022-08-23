@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/light-mode.css" id="theme">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Ratatype test</title>
 </head>
@@ -19,8 +19,10 @@
                     <div class="menu_item">
                         <div class="header_logo">
                             <a href="#">
-                                <img src="img/logo.png" id="image" class="logo" alt="">
-                                <img src="img/small_logo.png" id="image_small" alt="" class="small_logo">
+                                <img src="img/logo.png" id="image" class="logo logo_light" alt="">
+                                <img src="img/logo2.png" class="logo_dark logo" alt="">
+                                <img src="img/small_logo.png" id="image_small" alt="" class="small_logo small_logo_light">
+                                <img src="img/small_logo2.png" class="small_logo_dark" alt="">
                             </a>
                         </div>
                         <nav>
@@ -61,8 +63,8 @@
                                         <button class="restart" id="reset">
                                             <img src="img/Union.png" alt="">
                                         </button>
-                                        <button class="switch_mode">
-                                            <img src="img/light-mode.png" alt="">
+                                        <button id="switchMode" class="switch_mode">
+                                            <img id="switcher" src="img/dark-mode.png" alt="">
                                         </button>
                                         <div class="user">
                                             <img src="img/Rounded rectangle.png" alt="" srcset="">
@@ -101,8 +103,8 @@
             <button class="restart_mobail" id="reset_mob">
                 <img src="img/Union.png" alt="">
             </button>
-            <button class="switch_mode_mobile">
-                <img src="img/light-mode.png" alt="">
+            <button id="switchMode" class="switch_mode_mobile">
+                <img id="switcher" src="img/dark-mode.png" alt="">
             </button>
         </div>
 
