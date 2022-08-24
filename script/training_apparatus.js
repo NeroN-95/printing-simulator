@@ -1,46 +1,43 @@
-//  какие символы используются на первом уровне ? Пробел, j, f, k, d.
 
-// для начала нам нужна наша формула генереции случайного числа
+//   формула генереії випадкового числа
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
 
 let colors = ['is-info', 'is-success', 'is-warning', 'is-danger', 'is-link'];
-//цвета фреймворка bulma, в которые мы будем красить наши кнопки
-//при каждой генерации мы будем назначать каждому символу свой цвет, что бы пользователь при печати не путался
-let str_arr = [ 'f', 'k', 'd','c', ' '];
+//кольори фреймворка bulma або bootstrap, в які мы можемо фарбувати наші кнопки
+//при кожеій генерації ми будемо назначати кожному символу свій колір, щоб користувач при набору не плутавсь
+let str_arr = [ 'f', 'k', 'd', 'j', ' '];
 
-let begin = document.querySelector(".begin"); // здесь у нас надпись, которая приглашает пользователя нажать enter для начала игры. Потом она у нас должна пропасть
-let progress = document.getElementById("prog"); // здесь прогресс ошибок пользователя
-let buttons = document.querySelector('.buttons'); // элемент в который мы будем писать наши буковки
+let begin = document.querySelector(".begin"); // запрошення користувача нажати enter для початку гри. Потім вона повинна зникнути
+let progress = document.getElementById("prog"); //  прогресс помилок користувача
+let buttons = document.querySelector('.buttons'); // элемент в який записуються букви
 
-//теперь нужно отрисовать наши буковки
 
 function drawBoard() {
-    for (let index = 0; index < 14; index++) { // в идеале этот показатель пользователь должен иметь возможность изменить. Разберем это во второй части нашей статьи
-        let rand = getRandomInt(colors.length); // здесь у нас массив буковок и цифр одинаковый по длине, поэтому я выбрал цвета
+    for (let index = 0; index < 14; index++) { 
+        let rand = getRandomInt(colors.length); // масив букв і цифр - однаковий, тому можна примінити кольори в подальшому
         buttons.insertAdjacentHTML("afterbegin",
-            `<button class='game-button button is-large ${colors[rand]}' id='${str_arr[rand]}'>${str_arr[rand]}</button>`);
+        `<button class='game-button button is-large ${colors[rand]}' id='${str_arr[rand]}'>${str_arr[rand]}</button>`);
     }
 }
 
 document.addEventListener('keydown', StartGame, {
     once: true
-    //благодаря once у нас отрисовка вызывается только один раз
+    //завдяки 'once' у нас відрисовка викликажться лише один раз
 });
 
 function StartGame(e) {
     if (e.key == "Enter") {
         drawBoard();
-        begin.style.display = "none"; // скрываем приглашающую кнопку
-        mainGame(); // игра началась
+        begin.style.display = "none"; // скриваємо кнопку запрошення до гри
+        mainGame(); // гра почалась
     }
 }
-drawBoard();
-mainGame();
+
 function mainGame() {
-    document.addEventListener('keyup', press); //  я создал отдельную функцию, что бы была возможность ее останавливать
+    document.addEventListener('keyup', press); // функція дає змогу зупинити гру
 }
 
 
@@ -50,32 +47,32 @@ var errors_count = 0;
 
 function press(e) {
 
-    let elements_arr = document.querySelectorAll(".game-button");  // выбираем все созданные кнопки
+    let elements_arr = document.querySelectorAll(".game-button");  //  всі згенеровані кнопки
 
-    if (e.key == elements_arr[0].id) { // здесь можно выбирать и по querySelector, но тогда код будет длиннее
+    if (e.key == elements_arr[0].id) { 
         elements_arr[0].remove();
-        count_right++; //  считаем правильные ответы
+        count_right++; //  правильні відповіді
     } else {
-        errors_count++; // считаем ошибки
+        errors_count++; // помилки
         progress.value = errors_count;
-        if (errors_count > 20) { // если пользователь допустит ошибок больше чем у нас букв, игра закончится
-            let fail = confirm("Game over! Хотите еще раз поиграть?"); 
+        if (errors_count > 14) { // якщо помилок більше - гра зупиняється 
+            let fail = confirm("Game over! Хочете ще пограти ?"); 
             if (fail) {
-                document.location.reload(); // перезагрузка страницы если пользователь согласился еще раз играть
+                document.location.reload(); // перезавантаження якщо користувач, ще захоче грати
             } else {
-                // здесь могла быть ваша реклама
+                // тут могла бути ваша релама :D
                 document.addEventListener('keydown', press);
             }
         }
     }
-    if (count_right == 20) {
+    if (count_right == 14) {
         alert("Вы выйграли!");
         let win = confirm("Хотите поиграть еще?");
         if(win){
             // document.location.reload(); // тоже самое что и при проигрыше. В дальнейшем планируется исправить
             drawBoard();
-            begin.style.display = "none"; // скрываем приглашающую кнопку
-            mainGame(); // игра началась
+            begin.style.display = "none"; // скриваємо кнопку запрошення
+            mainGame(); // гра почалась
         }
     }
 }

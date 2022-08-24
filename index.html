@@ -14,7 +14,6 @@
     <header>
         <div class="container">
             <div class="header_content">
-                <!--<div class="header_content-inner"> -->
                 <div class="nav_item">
                     <div class="menu_item">
                         <div class="header_logo">
@@ -27,9 +26,7 @@
                         </div>
                         <nav>
                             <div class="menu">
-
-
-                                <div class="header__btn-menu"  >
+                                <div class="header__btn-menu">
                                     <div class="icon" onClick="imgsrc(); imgSmallsrc();">
                                         <span ></span>
                                         <span></span>
@@ -56,9 +53,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                    
-
-
                                     <div class="nav_switch">
                                         <button class="restart" id="reset">
                                             <img src="img/Union.png" alt="">
@@ -69,32 +63,34 @@
                                         <div class="user">
                                             <img src="img/Rounded rectangle.png" alt="" srcset="">
                                             <div class="user_item">
-                                              <span>Alex</span>
+                                            <span>Alex</span>
                                             <div class="exp">
                                                 <img src="img/gold_coin.png" alt="">
                                                 <span>35543</span>
                                             </div>  
                                             </div>
-                                           
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                     </div>
                     </nav>
                 </div>
-                <!-- </div>-->
             </div>
         </div>
     </header>
 
     <section class="hero is-primary is-large container">
         <!-- воспользуемся готовым элементом hero из bulma -->
+        <div class="hero-head container wraper"> 
+            <h3 class="label is-size-4 has-text-link has-text-centered">Помилки</h3>
+            <progress  id="prog" class="progress is-danger" value="0" max="14"></progress>
+            <h3 class="label is-size-5 has-text-white has-text-centered begin">Натисніть Enter для старту</h3>
+        </div>
         <div id="columns">
             <div class="bird"><img src="img/Group 307.png" alt="">
                 <div class="buttons columns  write simboal ">
-                    <!-- и здесь у нас будет происходить небольшая отрисовка  -->
+                    <!-- тут викоується відрисовка літер  -->
                 </div>
             </div>
 
@@ -112,7 +108,7 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/training_apparatus.js"></script>
-    <script src="script/reload.js"></script>
+    <script src="script/scripts.js"></script>
 
 </body>
 
