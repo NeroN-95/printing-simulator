@@ -1,5 +1,5 @@
 html {
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 button{
    border: none;
@@ -8,11 +8,11 @@ button{
 }
 body {
    
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: #5e5e5e;
-    background-color: #FFFFFF;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 18px;
+   color: #5e5e5e;
+   background-color: #FFFFFF;
    
 }
 
@@ -21,17 +21,21 @@ a {
    display: inline-block;
 }
 
-
+.wraper{
+   display: flex;
+   min-width: 100%;
+   overflow: hidden;
+   flex-direction: column;
+}
 
 .container {
-   max-width: 1170px;
+   max-width: 1750px;
    margin: 0 auto;
-   padding: 0 90px;
+   padding: 0 75px;
 }
 .header_content{
    display: contents;
 }
-
 
 
 .header {
@@ -61,8 +65,7 @@ a {
 
 
 nav {
-   display: flex;
-   align-items: center;
+  flex: 1;
 }
 .nav_item{
    display: contents
@@ -75,8 +78,11 @@ font-family: 'Montserrat', sans-serif;
 font-weight: 600; 
 line-height: 24px;
 letter-spacing: -0.20000000298023224px;
-width: 960px;
+width: 100%;
 color: #5e5e5e;
+}
+.menu.max{
+   overflow: auto;
 }
 
 .navbar a {
@@ -316,6 +322,7 @@ left: 50%;
    margin: 0 auto;
 }
 .menu{
+   display: block;
    text-align: right
 }
 .nav_switch{

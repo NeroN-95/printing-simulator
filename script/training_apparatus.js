@@ -35,6 +35,8 @@ function StartGame(e) {
         mainGame(); // гра почалась
     }
 }
+drawBoard();
+mainGame();
 
 function mainGame() {
     document.addEventListener('keyup', press); // функція дає змогу зупинити гру

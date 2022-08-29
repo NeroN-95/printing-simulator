@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style/light-mode.css" id="theme">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Ratatype test</title>
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="wrapper">
+<div class="container">
             <div class="header_content">
                 <div class="nav_item">
                     <div class="menu_item">
@@ -78,6 +80,8 @@
                 </div>
             </div>
         </div>
+        </div>
+        
     </header>
 
     <section class="hero is-primary is-large container">
@@ -85,7 +89,6 @@
         <div class="hero-head container wraper"> 
             <h3 class="label is-size-4 has-text-link has-text-centered">Помилки</h3>
             <progress  id="prog" class="progress is-danger" value="0" max="14"></progress>
-            <h3 class="label is-size-5 has-text-white has-text-centered begin">Натисніть Enter для старту</h3>
         </div>
         <div id="columns">
             <div class="bird"><img src="img/Group 307.png" alt="">
@@ -99,7 +102,7 @@
             <button class="restart_mobail" id="reset_mob">
                 <img src="img/Union.png" alt="">
             </button>
-            <button id="switchMode" class="switch_mode_mobile">
+            <button id="switch_mode_mobile" class="switch_mode_mobile">
                 <img id="switcher" src="img/dark-mode.png" alt="">
             </button>
         </div>

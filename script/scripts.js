@@ -6,15 +6,15 @@
             $(this).closest('.menu').toggleClass('menu-open');
         });
     });
+    $('#reset').on('click', function(){
+        location.reload();
+    });
+    $('#reset_mob').on('click', function(){
+        location.reload();
+    });
 })(jQuery);
 
 
-document.getElementById('reset').onclick = function() { 
-    location.reload(); 
-}
-document.getElementById('reset_mob').onclick = function(){
-    location.reload();
-}
 
 
 let i=0;
@@ -35,6 +35,20 @@ function imgSmallsrc() {
 
 let switchMode = document.getElementById('switchMode');
 switchMode.onclick = function () {
+    let theme = document.getElementById("theme");
+    let switcher = document.getElementById("switcher") ;
+    if (theme.getAttribute('href') == 'style/light-mode.css') {
+        theme.href = "style/dark-mode.css"
+        switcher.src = "img/light-mode.png"
+    }
+    else{
+        theme.href = "style/light-mode.css"
+        switcher.src = "img/dark-mode.png"
+    }
+}
+
+let switchModeMobile = document.getElementById('switch_mode_mobile');
+switchModeMobile.onclick = function () {
     let theme = document.getElementById("theme");
     let switcher = document.getElementById("switcher") ;
     if (theme.getAttribute('href') == 'style/light-mode.css') {
